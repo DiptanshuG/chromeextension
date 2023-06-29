@@ -13,3 +13,16 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+
+
+  console.log("firebase.js loaded");
+
+
+  chrome.runtime.orMessage.addListener(function(request, sender, sendResponse){
+if(msg.command=="fetch")
+var domain = request.data.domain;
+console.log("Fetching coupons for domain: " + domain);{
+
+}
+  })
