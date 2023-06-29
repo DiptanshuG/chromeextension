@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Coupon Finder",
+  "description": "Coupon Finder",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+ 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["app.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["app.js", "background.html", "firebase.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+
+}
